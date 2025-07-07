@@ -1,0 +1,131 @@
+/* Wrapper for the full scheduler page */
+.scheduler-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #b5e3df;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* Header bar */
+.scheduler-header {
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #004d40;
+  z-index: 10;
+}
+
+/* View selector group */
+.scheduler-header select {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #4db6ac;
+  background-color: #e0f2f1;
+  color: #004d40;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.scheduler-header select:hover,
+.scheduler-header select:focus {
+  border-color: #26a69a;
+  box-shadow: 0 0 5px rgba(38, 166, 154, 0.4);
+}
+
+/* Wrapper for the "View:" label + select */
+.scheduler-view-selector {
+  font-family: 'Segoe UI', sans-serif; /* or your preferred font */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #004d40;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Optional: override font for dropdown only */
+.scheduler-view-selector select {
+  font-family: inherit; /* will inherit from parent */
+}
+
+.scheduler-add-event {
+  margin-left: 1rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #4db6ac;
+  color: #004d40;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scheduler-add-event:hover {
+  background-color: #39998d;
+  box-shadow: 0 0 8px rgba(77, 182, 172, 0.5);
+}
+
+.scheduler-add-event:active {
+  transform: scale(0.98);
+}
+
+/* Right side of header (user info + logout) */
+.scheduler-user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.scheduler-user span {
+  font-weight: bold;
+  color: #004d40;
+}
+
+.scheduler-logout {
+  padding: 0.5rem 0.75rem;
+  background-color: #4db6ac;
+  color: #004d40;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.scheduler-logout:hover {
+  background-color: #39998d;
+  box-shadow: 0 0 8px rgba(77, 182, 172, 0.5);
+}
+
+.scheduler-logout:active {
+  transform: scale(0.98);
+}
+
+/* Main content area */
+.scheduler-main {
+  flex: 1;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Centered "Coming Soon" card */
+.coming-soon-box {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 320px;
+  margin: 4rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #004d40;
+  font-size: 1.25rem;
+}

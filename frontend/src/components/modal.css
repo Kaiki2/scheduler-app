@@ -1,0 +1,208 @@
+/* ========== Modal Overlay ========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* ========== Modal Box ========== */
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: min(500px, 90%);
+  max-height: 90vh;
+  overflow-y: auto;
+  color: #004d40;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+/* ========== Close Button ========== */
+.modal-content > button {
+  background-color: #4db6ac;
+  color: #004d40;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  float: right;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-content > button:hover {
+  background-color: #39998d;
+}
+
+/* ========== Form Labels & Inputs ========== */
+.event-form label {
+  display: block;
+  margin: 1rem 0 0.25rem;
+  font-weight: 500;
+  color: #004d40;
+}
+
+.event-form input,
+.event-form select {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #4db6ac;
+  background-color: #e0f2f1;
+  color: #004d40;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.event-form input:focus,
+.event-form select:focus {
+  border-color: #26a69a;
+  box-shadow: 0 0 5px rgba(38, 166, 154, 0.4);
+  outline: none;
+}
+
+/* ========== Submit Button ========== */
+.event-form button {
+  background-color: #4db6ac;
+  color: #004d40;
+  border: none;
+  padding: 0.75rem 1rem;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.event-form button:hover {
+  background-color: #39998d;
+  box-shadow: 0 0 8px rgba(77, 182, 172, 0.5);
+}
+
+/* ========== Header ========== */
+.event-form h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #004d40;
+}
+
+/* ========== Toggle Switch ========== */
+.toggle-row,
+.weekday-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+  color: #004d40;
+  font-weight: 500;
+}
+
+.weekday-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Toggle Switch Component */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 22px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4db6ac;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Smaller toggle for weekday */
+.weekday-toggle .switch {
+  width: 36px;
+  height: 18px;
+}
+
+.weekday-toggle .slider:before {
+  height: 14px;
+  width: 14px;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* ========== Date Picker Icon Fix ========== */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(34%) sepia(16%) saturate(796%) hue-rotate(122deg) brightness(95%) contrast(89%);
+  cursor: pointer;
+}
+
+/* Teal Close Button */
+.close-button {
+  background-color: #4db6ac;
+  color: #004d40;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  float: right;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: #39998d;
+}
+
+/* Weekly toggle layout */
+.week-toggle-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}

@@ -1,0 +1,122 @@
+/* ========== Container ========== */
+.event-list {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 1rem;
+  background-color: #e0f2f1; /* light teal background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #004d40;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========== Each Day Group ========== */
+.day-group {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 5px rgba(0, 77, 64, 0.1);
+}
+
+/* Day heading */
+.day-group > h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #004d40;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #4db6ac;
+  padding-bottom: 0.3rem;
+}
+
+/* ========== Event List inside each day ========== */
+.day-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== Each Event Item ========== */
+.event-item {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  background-color: #b2dfdb; /* lighter teal */
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0, 77, 64, 0.1);
+  color: #004d40;
+  font-size: 0.95rem;
+}
+
+/* Event title */
+.event-item strong {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Recurrence tag styling */
+.recurring-tag {
+  margin-top: 0.3rem;
+  font-style: italic;
+  color: #00796b;
+  font-size: 0.85rem;
+}
+
+/* Description */
+.event-item > div:not(.recurring-tag) {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #004d40;
+}
+
+/* ========== Buttons Container ========== */
+.event-item-buttons {
+  margin-top: 0.5rem;
+}
+
+/* Buttons styling */
+.event-item-buttons button {
+  background-color: #4db6ac;
+  color: #004d40;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.event-item-buttons button:hover {
+  background-color: #39998d;
+  box-shadow: 0 0 8px rgba(77, 182, 172, 0.5);
+}
+
+/* Confirm Delete Button (red) */
+.delete-confirm {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+  font-weight: 700;
+}
+
+.delete-confirm:hover {
+  background-color: #ef9a9a;
+  box-shadow: 0 0 8px rgba(183, 28, 28, 0.5);
+}
+
+/* Scrollbar for event list */
+.event-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.event-list::-webkit-scrollbar-track {
+  background: #e0f2f1;
+  border-radius: 12px;
+}
+
+.event-list::-webkit-scrollbar-thumb {
+  background-color: #4db6ac;
+  border-radius: 12px;
+  border: 2px solid #e0f2f1;
+}
